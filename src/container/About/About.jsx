@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { client, urlFor } from '../../client';
+import AppWrap from '../../wrapper/AppWrap';
 
 import './About.scss';
 
@@ -36,4 +37,4 @@ const About = () => {
 	)
 }
 
-export default About;
+export default AppWrap(About, 'about');
