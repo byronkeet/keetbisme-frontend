@@ -77,6 +77,10 @@ const Footer = () => {
 					</h3>
 				</div>
 			)}
+			<div className='copyright'>
+				<p className='p-text'>@2023 KEET.B</p>
+				<p className='p-text'>All rights reserved</p>
+			</div>
 		</Fragment>
 	);
 }
