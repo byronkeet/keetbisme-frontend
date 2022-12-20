@@ -18,8 +18,16 @@ const Work = () => {
 		const query = '*[_type == "works"]';
 
 		client.fetch(query).then((data) => {
-			setWorks(data);
-			setFilterWork(data);
+			const alphabetical = data.sort((a, b) => {
+				const keyA = a.tags[0];
+				const keyB = b.tags[0];
+				// Compare the 2 years
+				if (keyA < keyB) return -1;
+				if (keyA > keyB) return 1;
+				return 0;
+			  });
+			setWorks(alphabetical);
+			setFilterWork(alphabetical);
 		});
 	}, []);
 
